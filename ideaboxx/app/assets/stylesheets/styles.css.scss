@@ -1,0 +1,28 @@
+$btnPrimaryBackground: green;
+$navbarBackgroundHighlight: white;
+/* this gets rid of the standard background of the navbar
+$navbarBackground: white;
+*/
+
+@import 'bootstrap';
+@import "bootstrap-responsive";
+
+body {
+	padding-top: 60px;
+}
+
+/*this gets rid of the drop shadow on the navbar*/
+/*
+.navbar-inner {
+	@include box-shadow(none !important);
+	border: 0;
+}
+*/
+
+.footer{
+	margin-top:50px;
+	color:$grayLight;
+	a {
+		color:gray;
+	}
+}
