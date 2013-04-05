@@ -1,4 +1,7 @@
 Ideaboxx::Application.routes.draw do
+  resources :ideas
+
+
   devise_for :users
 
   root :to => 'pages#home'
