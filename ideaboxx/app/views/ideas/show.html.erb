@@ -5,16 +5,16 @@
 			<p>
 			  <%= @idea.description %>
 			</p>
-			<%#
-			<%#<p>
-			<%#	<small>
-			<%#		  Owner: <%= link_to @idea.user.name, profile_path(@idea.user.id) %>
-			<%#	</small>
-			<%#</p>
 			
-			<%#<% if current_user == @idea.user %>
-			<%= link_to 'Edit', edit_idea_path(@idea) %> |
-			<%#<% end %>
+			<p>
+				<small>
+					  Submitted by: <%= @idea.user.name %>
+				</small>
+			</p>
+			
+			<% if current_user == @idea.user %>
+				<%= link_to 'Edit', edit_idea_path(@idea) %> |
+			<% end %>
 			<%= link_to 'Back', ideas_path %>
 		</div>
 	</div>
