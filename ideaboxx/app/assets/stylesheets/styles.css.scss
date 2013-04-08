@@ -19,6 +19,14 @@ body {
 }
 */
 
+table tr.evenrow {
+	background-color: #FFFFFF;
+}
+
+table tr.oddrow {
+	background-color: #E8E8E8; 
+}
+
 .footer{
 	margin-top:50px;
 	color:$grayLight;

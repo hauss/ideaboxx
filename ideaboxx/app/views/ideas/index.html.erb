@@ -1,16 +1,16 @@
-<h1>All Ideas</h1>
+<h1>Ideas</h1>
 
 <table>
   <tr>
-    <th>Description</th>
-    <th>Submitted by:</th>
-    <th>Action</th>
+    <th class="span6">Description</th>
+    <th class="span2">Submitted by:</th>
+    <th class="span2">Action</th>
     <th></th>
     <th></th>
   </tr>
 
 <% @ideas.each do |idea| %>
-  <tr>
+  <tr class="<%= cycle('oddrow', 'evenrow') %>">
     <td><%= idea.description %></td>
     <td><%= idea.user.name %></td>
     <td>
@@ -18,7 +18,7 @@
       <%= link_to '', idea, :class => "icon-comment" %>
       <% if current_user == idea.user %>
         <%= link_to '', edit_idea_path(idea), :class => "icon-edit" %>
-        <%= link_to '', idea, method: :delete, data: { confirm: 'Are you sure?' }, :class => "icon-trash" %>
+        <%= link_to '', idea, method: :delete, data: { confirm: 'You''re about delete an idea. This cannot be undone. Are you sure?' }, :class => "icon-trash" %>
       </td>
     <% end %>
   </tr>
@@ -26,5 +26,4 @@
 </table>
 
 <br />
-
-<%= link_to 'New Idea', new_idea_path %>
+<%= link_to 'New Idea', new_idea_path, class: "btn btn-primary" %>
