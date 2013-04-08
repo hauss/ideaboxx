@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="span6 offset3">
+	<div class="span8">
 		<div class="well">
 			<b>Description:</b>
 			<p>
@@ -21,6 +21,10 @@
 				<%= link_to 'Edit', edit_idea_path(@idea) %> |
 			<% end %>
 			<%= link_to 'Back', ideas_path %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="span8">
 			<h3>Comments</h3>
 			<%= render @idea.comments %>
 			<%= render :partial => "comments/form" %>
