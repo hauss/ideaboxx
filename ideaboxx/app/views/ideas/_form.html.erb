@@ -1,7 +1,8 @@
 <%= simple_form_for(@idea, html: { class: "form-horizontal"}) do |f| %>
   <%= f.error_notification %>
 
-  <%= f.input :description, as: :text, input_html: { rows: "4" } %>
+  <%= f.input :description, :label => "Describe your idea:", as: :text, input_html: { rows: "5" } %>
+  <%= f.input :problem_statement, :label => "What problem does this idea solve?", as: :text, input_html: { rows: "5" } %>
 
   <div class="form-actions">
     <%= f.button :submit, class: "btn btn-primary" %>
