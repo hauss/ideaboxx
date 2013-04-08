@@ -1,6 +1,7 @@
 Ideaboxx::Application.routes.draw do
-  resources :ideas
-
+  resources :ideas do
+    resources :comments
+  end
 
   devise_for :users
 

@@ -1,0 +1,17 @@
+<p>
+	<div class="showComment">
+	  <em><%= comment.body %></em></br>
+	  <small><strong>~<%= User.find(comment.user_id).name %></strong></small>
+	  <% if current_user.id == comment.user_id %>
+		  <p>
+			  <small>
+				  <%= link_to 'Delete Comment', [comment.idea, comment],
+				               :confirm => 'Are you sure?',
+				               :method => :delete %>
+			  </small>
+			</p>
+		<% end %>
+
+
+	</div>
+</p>
