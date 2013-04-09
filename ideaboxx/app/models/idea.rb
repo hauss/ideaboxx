@@ -1,6 +1,5 @@
 class Idea < ActiveRecord::Base
-  attr_accessible :description, :problem_statement, :related_product, :submitted_by
-
+  attr_accessible :description, :problem_statement, :related_product, :submitted_by, :priority, :hours
   validates :description, presence: true
   validates :user_id, presence: true
 

@@ -3,9 +3,9 @@
 
   <%= f.input :description, :label => "Describe your idea:", as: :text, input_html: { rows: "5", class: "span8" } %>
   <%= f.input :problem_statement, :label => "What problem does this idea solve?", as: :text, input_html: { rows: "5", class: "span8" } %>
-  <%= f.input :related_product, :label => "Related product:", :collection => ["BPTW","Core","GoalPost","LeaderGrade","Marketing","TeamPulse","Wyygo"] %>
-  <% @users = User.all %>
-  <%= f.input :submitted_by, :label => "Submitted by:", collection: @users, :selected => current_user.id %>
+  <%= f.input :related_product, :label => "Related product:", :collection => ["BPTW","Core","GoalPost","LeaderGrade","Marketing","TeamPulse","Wyygo"], prompt: "Select related product" %>
+
+  <%= f.input :submitted_by, :label => "Submitted by:", :collection => User.all, :selected => current_user.id %>
 
   <div class="form-actions">
     <%= f.button :submit, class: "btn btn-primary" %>
