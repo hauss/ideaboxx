@@ -9,28 +9,20 @@
     <th class="span1">Priority</th>
     <th>Status</th>
     <th>Comment</th>
-    <%#<th class="span1">Action</th> %>
   </tr>
 
 <% @ideas.each do |idea| %>
-  <tr class="<%= cycle('oddrow', 'evenrow') %>">
-    <td><%= idea.related_product %></td>
-    <td><%= idea.description %></td>
-    <td><%= idea.submitted_by %></td>
-    <td><%= idea.hours %></td>
-    <td><%= idea.priority %></td>
-    <td><%= idea.status %></td>
-    <td align="center"><%= link_to '', idea, :class => "icon-comment" %></td>
-    <%#<td>
-      <%#<%= link_to '', idea, :class => "icon-zoom-in" %>
-      <%#<%= link_to '', idea, :class => "icon-comment" %>
-      <%#<% if current_user == idea.user %>
-      <%#  <%= link_to '', edit_idea_path(idea), :class => "icon-edit" %>
-      <%#  <%= link_to '', idea, method: :delete, data: { confirm: 'You''re about delete an idea. This cannot be undone. Are you sure?' }, :class => "icon-trash" %>
-      <%#<% end %>
-    <%#</td> %>
-    
-  </tr>
+  <div>
+    <tr class="<%= cycle('oddrow', 'evenrow') %>">
+      <td><%= idea.related_product %></td>
+      <td><%= idea.description %></td>
+      <td><%= idea.submitted_by %></td>
+      <td><span class="rest-in-place" data-url="ideas/11" data-object="idea" data-attribute="hours"><%= idea.hours %></span></td>
+      <td><%= idea.priority %></td>
+      <td><%= idea.status %></td>
+      <td align="center"><%= link_to '', idea, :class => "icon-comment" %></td>
+    </tr>
+  </div>
 <% end %>
 </table>
 
