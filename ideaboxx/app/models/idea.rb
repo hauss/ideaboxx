@@ -1,5 +1,5 @@
 class Idea < ActiveRecord::Base
-  attr_accessible :description, :problem_statement
+  attr_accessible :description, :problem_statement, :related_product
 
   validates :description, presence: true
   validates :user_id, presence: true

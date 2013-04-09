@@ -1,7 +1,7 @@
 <div class="comment">
   <% if current_user.id == comment.user_id %>
 	  <%= link_to '', [comment.idea, comment],
-	             :confirm => 'Are you sure?',
+	             :confirm => 'You''re about delete an idea. This cannot be undone. Are you sure?',
 	             :method => :delete, :class => "icon-trash pull-right" %>
  	<% end %>
  	<p>

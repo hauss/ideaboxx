@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th class="span1">Product</th>
     <th class="span6">Description</th>
     <th class="span2">Submitted by:</th>
     <th class="span2">Action</th>
@@ -11,6 +12,7 @@
 
 <% @ideas.each do |idea| %>
   <tr class="<%= cycle('oddrow', 'evenrow') %>">
+    <td><%= idea.related_product %></td>
     <td><%= idea.description %></td>
     <td><%= idea.user.name %></td>
     <td>

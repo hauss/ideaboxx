@@ -18,6 +18,9 @@ body {
 	border: 0;
 }
 */
+table th {
+	text-align: left;
+}
 
 table tr.evenrow {
 	background-color: #FFFFFF;
@@ -33,6 +36,10 @@ div.comment {
 	clear: left;
 	color: #333;
 	padding: 10px 0;
+}
+
+div.new_comment {
+	margin-top: 10px;
 }
 
 .footer{

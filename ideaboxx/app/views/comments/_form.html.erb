@@ -1,8 +1,11 @@
-<%= form_for([@idea, @idea.comments.build]) do |f| %>
-  <div class="field">
-    <%= f.text_area :body, :rows => "3", :placeholder => "Enter your comment" %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<div class="new_comment">
+	<%#<%= form_for([@idea, @idea.comments.build]) do |f| %>
+	<%= simple_form_for([@idea, @idea.comments.build], html: { class: "form-vertical"}) do |f| %>
+	    <%#<%= f.text_area :body, :rows => "3", :placeholder => "Enter your comment" %>
+	    <%#<%= f.input :body, :placeholder => "Enter your comment", as: :text, input_html: { rows: "5", class: "span8" } %>
+	    <%= f.input :body, label: false, :placeholder => "Add your comment", as: :text, input_html: { rows: "5", class: "span8" } %>
+	  <div class="actions">
+	    <%= f.submit %>
+	  </div>
+	<% end %>
+</div>
