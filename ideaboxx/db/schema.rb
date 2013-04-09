@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130409141358) do
+ActiveRecord::Schema.define(:version => 20130409141819) do
 
   create_table "comments", :force => true do |t|
     t.text     "body"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20130409141358) do
     t.string   "submitted_by"
     t.integer  "priority"
     t.integer  "hours"
+    t.string   "status"
   end
 
   add_index "ideas", ["user_id"], :name => "index_ideas_on_user_id"
