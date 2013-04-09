@@ -7,7 +7,9 @@
     <th class="span2">Submitter</th>
     <th class="span1">Hours</th>
     <th class="span1">Priority</th>
-    <th class="span1">Action</th>
+    <th>Status</th>
+    <th></th>
+    <%#<th class="span1">Action</th> %>
   </tr>
 
 <% @ideas.each do |idea| %>
@@ -15,16 +17,18 @@
     <td><%= idea.related_product %></td>
     <td><%= idea.description %></td>
     <td><%= idea.submitted_by %></td>
-    <td></td>
-    <td></td>
-    <td>
+    <td><%= idea.hours %></td>
+    <td><%= idea.priority %></td>
+    <td><%= idea.status %></td>
+    <td><%= link_to '', idea, :class => "icon-comment" %></td>
+    <%#<td>
       <%#<%= link_to '', idea, :class => "icon-zoom-in" %>
-      <%= link_to '', idea, :class => "icon-comment" %>
+      <%#<%= link_to '', idea, :class => "icon-comment" %>
       <%#<% if current_user == idea.user %>
       <%#  <%= link_to '', edit_idea_path(idea), :class => "icon-edit" %>
       <%#  <%= link_to '', idea, method: :delete, data: { confirm: 'You''re about delete an idea. This cannot be undone. Are you sure?' }, :class => "icon-trash" %>
       <%#<% end %>
-      </td>
+    <%#</td> %>
     
   </tr>
 <% end %>
