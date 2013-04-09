@@ -1,4 +1,7 @@
 <div class="comment">
+	<a class="pull-left padding5" href="#">
+		<img src="http://placehold.it/48x48">
+	</a>
   <% if current_user.id == comment.user_id %>
 	  <%= link_to '', [comment.idea, comment],
 	             :confirm => 'You''re about delete an idea. This cannot be undone. Are you sure?',
