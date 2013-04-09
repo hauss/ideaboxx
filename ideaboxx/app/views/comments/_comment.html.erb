@@ -1,17 +1,12 @@
-<p>
-	<div class="showComment">
-	  <em><%= comment.body %></em></br>
-	  <small><strong>~<%= User.find(comment.user_id).name %></strong></small>
-	  <% if current_user.id == comment.user_id %>
-		  <p>
-			  <small>
-				  <%= link_to 'Delete Comment', [comment.idea, comment],
-				               :confirm => 'Are you sure?',
-				               :method => :delete %>
-			  </small>
-			</p>
-		<% end %>
+<div class="comment">
+  <% if current_user.id == comment.user_id %>
+	  <%= link_to '', [comment.idea, comment],
+	             :confirm => 'Are you sure?',
+	             :method => :delete, :class => "icon-trash pull-right" %>
+ 	<% end %>
+ 	<p>
+ 		<small><strong><%= User.find(comment.user_id).name %></strong> <%= l comment.created_at, :format => :short %></small>
+	</p>
+  <em><%= comment.body %></em></br>
 
-
-	</div>
-</p>
+</div>

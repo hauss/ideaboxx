@@ -6,9 +6,9 @@ class CommentsController < ApplicationController
 	end
 
   def destroy
-    @pin = Pin.find(params[:idea_id])
+    @idea = Idea.find(params[:idea_id])
     @comment = @idea.comments.find(params[:id])
     @comment.destroy
-    redirect_to idea_path(@pin)
+    redirect_to idea_path(@idea)
   end
 end
