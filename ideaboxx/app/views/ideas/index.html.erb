@@ -3,12 +3,12 @@
 <table>
   <tr>
     <th class="span2">Product</th>
-    <th class="span5">Description</th>
+    <th class="span5">Idea</th>
     <th class="span2">Submitter</th>
     <th class="span1">Hours</th>
     <th class="span1">Priority</th>
     <th>Status</th>
-    <th></th>
+    <th>Comment</th>
     <%#<th class="span1">Action</th> %>
   </tr>
 
@@ -20,7 +20,7 @@
     <td><%= idea.hours %></td>
     <td><%= idea.priority %></td>
     <td><%= idea.status %></td>
-    <td><%= link_to '', idea, :class => "icon-comment" %></td>
+    <td align="center"><%= link_to '', idea, :class => "icon-comment" %></td>
     <%#<td>
       <%#<%= link_to '', idea, :class => "icon-zoom-in" %>
       <%#<%= link_to '', idea, :class => "icon-comment" %>
