@@ -4,8 +4,8 @@
 	    <%#<%= f.text_area :body, :rows => "3", :placeholder => "Enter your comment" %>
 	    <%#<%= f.input :body, :placeholder => "Enter your comment", as: :text, input_html: { rows: "5", class: "span8" } %>
 	    <%= f.input :body, label: false, :placeholder => "Add your comment", as: :text, input_html: { rows: "5", class: "span8" } %>
-	  <div class="actions">
-	    <%= f.submit %>
+	  <div class="form-actions">
+	    <%= f.button :submit, class: "btn btn-primary" %>
 	  </div>
 	<% end %>
 </div>

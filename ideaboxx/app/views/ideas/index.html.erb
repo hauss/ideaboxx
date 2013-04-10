@@ -1,5 +1,13 @@
-<h1>Ideas</h1>
-
+<div class="row">
+  <div class="span2">
+    <h1>Ideas</h1>
+  </div>
+  <div class="span10 float-right text-align-right">
+    <p>The six stages of an idea:</p>
+    <p>New > Needs Requirements > Sprintable > Sprint > Staged > Done</p>
+  </div>
+</div>
+<br/>
 <table>
   <tr>
     <th class="span2">Product</th>
@@ -12,17 +20,19 @@
   </tr>
 
 <% @ideas.each do |idea| %>
-  <div>
-    <tr class="<%= cycle('oddrow', 'evenrow') %>">
-      <td><%= idea.related_product %></td>
-      <td><%= idea.description %></td>
-      <td><%= idea.submitted_by %></td>
-      <td><span class="rest-in-place" data-url="ideas/11" data-object="idea" data-attribute="hours"><%= idea.hours %></span></td>
-      <td><%= idea.priority %></td>
-      <td><%= idea.status %></td>
-      <td align="center"><%= link_to '', idea, :class => "icon-comment" %></td>
-    </tr>
-  </div>
+  <tr class="<%= cycle('oddrow', 'evenrow') %>">
+    <td><%= idea.related_product %></td>
+    <td><%= idea.description %></td>
+    <td><%= idea.submitted_by %></td>
+    <td><span class="rest-in-place" data-url="ideas/<%= idea.id %>" data-object="idea" data-attribute="hours"><%= idea.hours %></span></td>
+    <td><span class="rest-in-place" data-url="ideas/<%= idea.id %>" data-object="idea" data-attribute="priority"><%= idea.priority %></span></td>
+    <td><span class="rest-in-place" data-url="ideas/<%= idea.id %>" data-object="idea" data-attribute="status"><%= idea.status %></span></td>
+    <td>
+      <%= link_to '', idea, :class => "icon-zoom-in" %>
+      <% if idea.comments.count >= 1 %>
+        <%= link_to '', idea, :class => "icon-comment" %></td>
+      <% end %>
+  </tr>
 <% end %>
 </table>
 
