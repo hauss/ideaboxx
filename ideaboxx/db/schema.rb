@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130409141819) do
+ActiveRecord::Schema.define(:version => 201304100813646) do
 
   create_table "comments", :force => true do |t|
     t.text     "body"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(:version => 20130409141819) do
     t.string   "problem_statement"
     t.string   "related_product"
     t.string   "submitted_by"
-    t.integer  "priority"
+    t.decimal  "priority"
     t.integer  "hours"
     t.string   "status"
   end
