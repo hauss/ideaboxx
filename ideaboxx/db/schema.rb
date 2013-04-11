@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(:version => 201304100813646) do
     t.decimal  "priority"
     t.integer  "hours"
     t.string   "status"
+    t.string   "sprint_num"
   end
 
   add_index "ideas", ["user_id"], :name => "index_ideas_on_user_id"

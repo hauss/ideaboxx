@@ -15,6 +15,7 @@
     <th class="span2">Submitter</th>
     <th class="span1">Hours</th>
     <th class="span1">Priority</th>
+    <th class="span1">Sprint</th>
     <th>Status</th>
     <th>Comment</th>
   </tr>
@@ -22,10 +23,11 @@
 <% @ideas.each do |idea| %>
   <tr class="<%= cycle('oddrow', 'evenrow') %>">
     <td><%= idea.related_product %></td>
-    <td><%= idea.description %></td>
+    <td><span class="rest-in-place" data-url="ideas/<%= idea.id %>" data-object="idea" data-attribute="description" data-formtype="textarea"><%= idea.description %></span></td>
     <td><%= idea.submitted_by %></td>
     <td><span class="rest-in-place" data-url="ideas/<%= idea.id %>" data-object="idea" data-attribute="hours"><%= idea.hours %></span></td>
     <td><span class="rest-in-place" data-url="ideas/<%= idea.id %>" data-object="idea" data-attribute="priority"><%= idea.priority %></span></td>
+    <td><span class="rest-in-place" data-url="ideas/<%= idea.id %>" data-object="idea" data-attribute="sprint_num"><%= idea.sprint_num %></span></td>
     <td><span class="rest-in-place" data-url="ideas/<%= idea.id %>" data-object="idea" data-attribute="status"><%= idea.status %></span></td>
     <td>
       <%= link_to '', idea, :class => "icon-zoom-in" %>
