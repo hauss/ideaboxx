@@ -17,8 +17,16 @@ ActiveRecord::Schema.define(:version => 201304100813646) do
     t.text     "body"
     t.integer  "user_id"
     t.integer  "idea_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
   end
 
   add_index "comments", ["idea_id"], :name => "index_comments_on_idea_id"

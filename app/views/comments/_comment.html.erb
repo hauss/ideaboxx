@@ -11,5 +11,8 @@
  		<small><strong><%= User.find(comment.user_id).name %></strong> <%= l comment.created_at, :format => :short %></small>
 	</p>
   <%= comment.body %></br>
+  <% unless comment.attachment.blank? %>
+	  <%= image_tag comment.attachment.url(:thumb) %>
+  <% end %>
 
 </div>
