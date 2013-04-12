@@ -12,7 +12,8 @@
 	</p>
   <%= comment.body %></br>
   <% unless comment.attachment.blank? %>
-	  <%= image_tag comment.attachment.url(:medium) %>
+	  <%#<%= image_tag comment.attachment.url(:medium) %>
+	  <%=link_to image_tag(comment.attachment.url(:medium)), comment.attachment.url(:original), :target => "_blank" %>
   <% end %>
 
 </div>
