@@ -12,7 +12,7 @@
 	</p>
   <%= comment.body %></br>
   <% unless comment.attachment.blank? %>
-	  <%= image_tag comment.attachment.url(:thumb) %>
+	  <%= image_tag comment.attachment.url(:medium) %>
   <% end %>
 
 </div>
