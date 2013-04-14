@@ -1,5 +1,8 @@
 
-<% unless user_signed_in? %>
+<% if user_signed_in? %>
+<%= link_to "See ideas", ideas_path %>
+
+<% else %>
 	<div class="hero-unit">
 			<h1>Welcome to Ideaboxx</h1>
 			<p>
@@ -9,4 +12,5 @@
 				<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
 			</p>
 	</div>
+
 <% end %>
