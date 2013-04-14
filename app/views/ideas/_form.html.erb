@@ -6,10 +6,10 @@
   <%= f.input :related_product, :label => "Related product:", :collection => ["BPTW","Core","GoalPost","LeaderGrade","Marketing","TeamPulse","Wyygo"], prompt: "Select related product" %>
 
   <%= f.input :submitted_by, :label => "Submitted by:", :collection => User.all, :selected => current_user.id %>
-  <%= f.input :hours, :as => :hidden, :input_html => { :value => 0 } %>
-  <%= f.input :priority, :as => :hidden, :input_html => { :value => 0 } %>
+  <%= f.input :hours, :as => :hidden, :input_html => { :value => -1 } %>
+  <%= f.input :priority, :as => :hidden, :input_html => { :value => -1 } %>
   <%= f.input :status, :as => :hidden, :input_html => { :value => "New" } %>
-  <%= f.input :sprint_num, :as => :hidden, :input_html => { :value => "TBD" } %>
+  <%= f.input :sprint_num, :as => :hidden, :input_html => { :value => -1 } %>
 
   <div class="form-actions">
     <%= f.button :submit, class: "btn btn-primary" %>
