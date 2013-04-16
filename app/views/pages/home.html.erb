@@ -1,6 +1,47 @@
 
 <% if user_signed_in? %>
-<%= link_to "See ideas", ideas_path %>
+	<div class="row">
+	  <div class="span3">
+	    <h1>Last 5 Ideas</h1>
+	  </div>
+	  <div class="span9 float-right text-align-right">
+	    <p>The six stages of an idea:</p>
+	    <p>New > Needs Requirements > Sprintable > Sprint > Staged > Done</p>
+	  </div>
+	</div>
+	<br/>
+	<table>
+	  <tr>
+	    <th class="span2">Product</th>
+	    <th class="span5">Idea</th>
+	    <th class="span2">Submitter</th>
+	    <th class="span1">Hours</th>
+	    <th class="span1">Priority</th>
+	    <th class="span1">Sprint</th>
+	    <th>Status</th>
+	    <th>Comment</th>
+	  </tr>
+
+	<% @recentIdeas.each do |idea| %>
+	  <tr class="<%= cycle('oddrow', 'evenrow') %>">
+	    <td><%= idea.related_product %></td>
+	    <td><span class="rest-in-place" data-url="ideas/<%= idea.id %>" data-object="idea" data-attribute="description" data-formtype="textarea"><%= idea.description %></span></td>
+	    <td><%= idea.submitted_by %></td>
+	    <td><span class="rest-in-place" data-url="ideas/<%= idea.id %>" data-object="idea" data-attribute="hours"><%= idea.hours %></span></td>
+	    <td><span class="rest-in-place" data-url="ideas/<%= idea.id %>" data-object="idea" data-attribute="priority"><%= idea.priority %></span></td>
+	    <td><span class="rest-in-place" data-url="ideas/<%= idea.id %>" data-object="idea" data-attribute="sprint_num"><%= idea.sprint_num %></span></td>
+	    <td><span class="rest-in-place" data-url="ideas/<%= idea.id %>" data-object="idea" data-attribute="status"><%= idea.status %></span></td>
+	    <td>
+	      <%= link_to '', idea, :class => "icon-zoom-in" %>
+	      <% if idea.comments.count >= 1 %>
+	        <%= link_to '', idea, :class => "icon-comment" %></td>
+	      <% end %>
+	  </tr>
+	<% end %>
+	</table>
+
+	<br />
+	<%= link_to "See all ideas", ideas_path %>
 
 <% else %>
 	<div class="hero-unit">
