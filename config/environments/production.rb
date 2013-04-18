@@ -66,7 +66,7 @@ Ideaboxx::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   #In production, :host should be et to the actual host of your application - update later
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'http://hidden-ridge-6694.herokuapp.com/' }
   
   # Paperclip should use Amazon S3 on Heroku
   config.paperclip_defaults = {

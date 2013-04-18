@@ -61,5 +61,8 @@ module Ideaboxx
 
     # Required for Devise on Heroku
     config.assets.initialize_on_precompile = false
+
+    # Overriding Devise Registrations Controller...need this per http://stackoverflow.com/questions/3546289/override-devise-registrations-controller
+    paths.app.views << "app/views/devise"
   end
 end

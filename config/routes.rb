@@ -3,8 +3,8 @@ Ideaboxx::Application.routes.draw do
     resources :comments
   end
 
-  devise_for :users
-
+  devise_for :users, :controllers => {:registrations => "registrations"}
+  
   root :to => 'pages#home'
   get 'about'  => 'pages#about'
 
