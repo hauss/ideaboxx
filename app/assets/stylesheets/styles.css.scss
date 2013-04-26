@@ -8,7 +8,7 @@ $navbarBackground: white;
 @import "bootstrap-responsive";
 
 body {
-	padding-top: 60px;
+	padding-top: 100px;
 }
 
 /*this gets rid of the drop shadow on the navbar*/
@@ -18,6 +18,11 @@ body {
 	border: 0;
 }
 */
+
+.nav li {
+	padding-top: 18px;
+}
+
 table th {
 	text-align: left;
 }
