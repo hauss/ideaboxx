@@ -3,7 +3,8 @@
 	<div class="span8">
 		<div class="well">
 			<b>Description:</b>
-			<div class="float-right"><%= link_to 'Edit Idea', edit_idea_path(@idea) %></div>
+			<div class="float-right"><%= link_to '', @idea, method: :delete, data: { confirm: 'Are you sure?' }, :class => "icon-trash" %></div>
+			<div class="float-right"><%= link_to '', edit_idea_path(@idea), :class => "icon-pencil" %></div>
 			<p>
 			  <%= @idea.description %>
 			</p>
