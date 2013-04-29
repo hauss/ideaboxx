@@ -1,1 +1,1 @@
-Ideaboxx is an idea mgmt system based on scrum ideas.
+Ideaboxx is an idea mgmt system based on scrum ideas.  Updating it to recompile to Heroku.
