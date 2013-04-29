@@ -33,8 +33,8 @@ ActiveRecord::Schema.define(:version => 201304100813646) do
 
   create_table "ideas", :force => true do |t|
     t.string   "description"
-    t.datetime "created_at",                       :null => false
-    t.datetime "updated_at",                       :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.integer  "user_id"
     t.string   "problem_statement"
     t.string   "related_product"
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(:version => 201304100813646) do
     t.decimal  "priority"
     t.integer  "hours"
     t.string   "status"
-    t.integer  "sprint_num",        :limit => 255
+    t.integer  "sprint_num"
   end
 
   add_index "ideas", ["user_id"], :name => "index_ideas_on_user_id"
