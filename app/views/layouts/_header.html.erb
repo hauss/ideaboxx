@@ -14,9 +14,12 @@
  
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
-      <%#<ul class="nav">
-	    <%#  <li><%= link_to "About", about_path %></li>
-	    <%#</ul> %>
+        <ul class="nav">
+          <% if current_user.try(:admin?) %>
+            <li><%= link_to "Admin", admin_path %></li>
+          <% end %>
+        </ul>
+
       	<ul class="nav pull-right">
           <% if user_signed_in? %>
             <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
