@@ -1,0 +1,13 @@
+<%= simple_form_for(@user, html: { class: 'form-horizontal'}) do |f| %>
+   <%= f.error_notification %>
+
+   <%= f.input :name %>
+   <%= f.input :email %>
+   <%= f.input :password %>
+   <%= f.input :password_confirmation %>
+   <em>Note:</em> If you're updating a User record and don't want to edit password, just leave it blank.
+
+  <div class="form-actions">
+   <%= f.submit "Creat User", class: "btn btn-primary" %>
+  </div>
+<% end %>

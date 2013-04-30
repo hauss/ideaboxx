@@ -27,7 +27,9 @@
             <li><div><%= link_to 'New Idea', new_idea_path, class: "btn btn-primary" %></div></li>
           <% else %>
             <li><%= link_to "Login", new_user_session_path %></li>
+            <% if false %>
             <li><div><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %></div></li>
+            <% end %>
           <% end %>
 	    </ul>		
       </div>

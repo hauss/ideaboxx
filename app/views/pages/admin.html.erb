@@ -1,6 +1,7 @@
 <h1>Admin</h1>
 	<% if current_user.admin? %>
-	  This is where I'll add a create user capability.
+	  <%= link_to '<i class="icon-user"></i> Manage Users'.html_safe, users_path %>
+
 	<% else %>
 		<p>Sorry, you don't have access to this page. Please request admin access from your administrator.</p>
 
