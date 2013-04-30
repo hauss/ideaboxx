@@ -1,10 +1,6 @@
 <div class="row">
   <div class="span2">
-    <h1>Ideas</h1>
-  </div>
-  <div class="span10 float-right text-align-right">
-    <p>The six stages of an idea:</p>
-    <p>New > Needs Requirements > Sprintable > Sprint > Staged > Done</p>
+    <h1>All Ideas</h1>
   </div>
 </div>
 <br/>
@@ -17,7 +13,7 @@
     <th class="span1">Priority</th>
     <th class="span1">Sprint</th>
     <th>Status</th>
-    <th>Comment</th>
+    <th>Actions</th>
   </tr>
 
 <% @ideas.each do |idea| %>
@@ -30,6 +26,7 @@
     <td><span class="rest-in-place" data-url="ideas/<%= idea.id %>" data-object="idea" data-attribute="sprint_num"><%= idea.sprint_num %></span></td>
     <td><span class="rest-in-place" data-url="ideas/<%= idea.id %>" data-object="idea" data-attribute="status"><%= idea.status %></span></td>
     <td>
+      <%= link_to '', "#", :class => "icon-star" %>
       <%= link_to '', idea, :class => "icon-zoom-in" %>
       <% if idea.comments.count >= 1 %>
         <%= link_to '', idea, :class => "icon-comment" %></td>

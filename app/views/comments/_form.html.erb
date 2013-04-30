@@ -1,13 +1,12 @@
 <div class="new_comment">
 	<%#<%= form_for([@idea, @idea.comments.build]) do |f| %>
 	<%= simple_form_for([@idea, @idea.comments.build], html: { class: "form-vertical"}) do |f| %>
-	    <%#<%= f.text_area :body, :rows => "3", :placeholder => "Enter your comment" %>
-	    <%#<%= f.input :body, :placeholder => "Enter your comment", as: :text, input_html: { rows: "5", class: "span8" } %>
 	    <%= f.input :body, label: false, :placeholder => "Add your comment", as: :text, input_html: { rows: "5", class: "span8" } %>
-	    <%= f.input :attachment, label: "Attach an image or file" %>
+	    <div class="span4">
+		    <%= f.input :attachment, label: "Attach an image or file" %>
+		  </div>
 
-
-	  <div class="form-actions">
+	  <div class="pull-right span2">
 	    <%= f.button :submit, class: "btn btn-primary" %>
 	  </div>
 	<% end %>
