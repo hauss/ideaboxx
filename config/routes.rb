@@ -3,7 +3,7 @@ Ideaboxx::Application.routes.draw do
     resources :comments
   end
 
-  devise_for :users, :skip => [:registrations]
+  devise_for :users
 
   scope "/admin" do
     resources :users
