@@ -24,7 +24,18 @@
 	<div class="span4">
 		<div class="well">
 			<p><strong>People watching this idea</strong></p>
-			<%= @idea.watchers %>
+			<% @idea.watchers.each do |user| %>
+				<table>
+					<tr>
+						<td><%= user.name %></td>
+					</tr>
+				</table>
+			<% end %>
+			<% unless @idea.watchers.include?(current_user) %>
+				<%= link_to 'Watch this idea', '#' %>
+				<% else %>
+				<%= link_to 'Stop watching', '#' %>
+			<% end %>
 		</div>
 	</div>
 </div>
