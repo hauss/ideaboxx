@@ -5,4 +5,6 @@ class Idea < ActiveRecord::Base
 
   belongs_to :user
   has_many :comments
+  has_many :watches
+	has_many :watchers, :through => :watches
 end

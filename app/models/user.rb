@@ -10,4 +10,6 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   has_many :ideas
+  has_many :watches
+	has_many :watched_ideas, :through => :watches
 end
